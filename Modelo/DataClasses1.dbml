@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="controlIcbf" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DAVID-LAPTOP\SQLEXPRESS;Initial Catalog=controlIcbf;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="controlIcbfConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.asistencia" Member="asistencias">
+    <Type Name="asistencia">
+      <Column Name="noRegistro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nIdNino" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="estadoNino" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="nino_asistencia" Member="nino" ThisKey="nIdNino" OtherKey="idNino" Type="nino" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.avanceAcademico" Member="avanceAcademicos">
+    <Type Name="avanceAcademico">
+      <Column Name="noRegsitro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nIdNino" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="anioEscolar" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="nivel" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="nota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="fechaCalificacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="nino_avanceAcademico" Member="nino" ThisKey="nIdNino" OtherKey="idNino" Type="nino" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jardines" Member="jardines">
+    <Type Name="jardine">
+      <Column Name="idJardin" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="encargado" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="jardine_nino" Member="ninos" ThisKey="idJardin" OtherKey="jIdJardin" Type="nino" />
+      <Association Name="usuario_jardine" Member="usuario" ThisKey="encargado" OtherKey="idUsuario" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ninos" Member="ninos">
+    <Type Name="nino">
+      <Column Name="idNino" Type="System.String" DbType="VarChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tipoSangre" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ciudadOrigen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="aIdAcudiente" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="EPS" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="jIdJardin" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="uIdUsuarioRegistra" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="nino_asistencia" Member="asistencias" ThisKey="idNino" OtherKey="nIdNino" Type="asistencia" />
+      <Association Name="nino_avanceAcademico" Member="avanceAcademicos" ThisKey="idNino" OtherKey="nIdNino" Type="avanceAcademico" />
+      <Association Name="jardine_nino" Member="jardine" ThisKey="jIdJardin" OtherKey="idJardin" Type="jardine" IsForeignKey="true" />
+      <Association Name="usuario_nino" Member="usuario" ThisKey="uIdUsuarioRegistra" OtherKey="idUsuario" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipoUsuarios" Member="tipoUsuarios">
+    <Type Name="tipoUsuario">
+      <Column Name="idTipoUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcionEstado" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="tipoUsuario_usuario" Member="usuarios" ThisKey="idTipoUsuario" OtherKey="tUsuario" Type="usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios" Member="usuarios">
+    <Type Name="usuario">
+      <Column Name="idUsuario" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fechaNace" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(110)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="clave" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Association Name="usuario_jardine" Member="jardines" ThisKey="idUsuario" OtherKey="encargado" Type="jardine" />
+      <Association Name="usuario_nino" Member="ninos" ThisKey="idUsuario" OtherKey="uIdUsuarioRegistra" Type="nino" />
+      <Association Name="tipoUsuario_usuario" Member="tipoUsuario" ThisKey="tUsuario" OtherKey="idTipoUsuario" Type="tipoUsuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_login" Method="sp_login">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="password" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_loginResult">
+      <Column Name="idUsuario" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fechaNace" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(110)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="clave" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
