@@ -8,8 +8,6 @@
                 <asp:Label ID="Label1" runat="server" Text="lbRegistro"></asp:Label>
                 <asp:TextBox class="form-control" ID="tbRegistro" runat="server"></asp:TextBox>
 
-
-
                 <asp:Label ID="Label3" runat="server" Text="lbFecha"></asp:Label>
                 <asp:TextBox class="form-control" ID="tbFecha" runat="server"></asp:TextBox>
 
@@ -17,7 +15,6 @@
                 </cc1:CalendarExtender>
 
                 <asp:ImageButton ID="imgCalendario" runat="server" Height="50px" ImageUrl="~/img/1.jpg" Width="50px"  />
-
 
                 <asp:Label ID="Label4" runat="server" Text="lbEstado"></asp:Label>
                 <asp:TextBox class="form-control" ID="tbEstado" runat="server"></asp:TextBox>

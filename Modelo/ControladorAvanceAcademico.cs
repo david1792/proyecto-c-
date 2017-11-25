@@ -7,7 +7,7 @@ using Modelo;
 
 namespace Modelo
 {
-    class ControladorAvanceAcademico
+    public class ControladorAvanceAcademico
     {
         public bool registrarAvanceAcademico(avanceAcademico avanceAcademico)
         {

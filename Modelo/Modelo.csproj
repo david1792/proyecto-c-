@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLSPersona.cs" />
+    <Compile Include="ControladorAvanceAcademico.cs" />
     <Compile Include="CsAsistencia.cs" />
     <Compile Include="CsUsuario.cs" />
     <Compile Include="DataClasses1.designer.cs">

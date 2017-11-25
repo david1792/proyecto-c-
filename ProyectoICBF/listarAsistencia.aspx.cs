@@ -65,6 +65,7 @@ namespace ProyectoICBF
             if (csAsistencia.registrarAsistencia(asistencia))
             {
                 Console.WriteLine("see");
+                gvAsistencia.DataBind();
             }
             else
             {
