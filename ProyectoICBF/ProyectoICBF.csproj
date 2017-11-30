@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Asistencia.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -152,7 +153,6 @@
     <Content Include="listarJardines.aspx" />
     <Content Include="listarNinos.aspx" />
     <Content Include="listarTipoUsuarios.aspx" />
-    <Content Include="listarUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -200,6 +200,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Asistencia.aspx.cs">
+      <DependentUpon>Asistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asistencia.aspx.designer.cs">
+      <DependentUpon>Asistencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,13 +258,6 @@
     </Compile>
     <Compile Include="listarTipoUsuarios.aspx.designer.cs">
       <DependentUpon>listarTipoUsuarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="listarUsuarios.aspx.cs">
-      <DependentUpon>listarUsuarios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="listarUsuarios.aspx.designer.cs">
-      <DependentUpon>listarUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
