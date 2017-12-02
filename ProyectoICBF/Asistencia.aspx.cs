@@ -55,6 +55,5 @@ namespace ProyectoICBF
             }
             gvAsistencia.DataBind();
         }
-
     }
 }
