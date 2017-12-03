@@ -9,7 +9,6 @@ namespace Modelo
 {
     public class ControladorNino
     {
-
         public void registrarNino(nino nino)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();

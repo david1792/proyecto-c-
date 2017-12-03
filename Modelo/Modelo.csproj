@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CLSPersona.cs" />
     <Compile Include="ControladorAvanceAcademico.cs" />
+    <Compile Include="ControladorJardin.cs" />
     <Compile Include="ControladorNino.cs" />
     <Compile Include="CsAsistencia.cs" />
     <Compile Include="CsUsuario.cs" />

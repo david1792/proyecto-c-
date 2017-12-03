@@ -146,9 +146,8 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="img\1.jpg" />
+    <Content Include="jardin.aspx" />
     <Content Include="listarAvanceAcademico.aspx" />
-    <Content Include="listarJardines.aspx" />
-    <Content Include="listarNinos.aspx" />
     <Content Include="listarTipoUsuarios.aspx" />
     <Content Include="index.aspx" />
     <Content Include="ninos.aspx" />
@@ -205,26 +204,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="jardin.aspx.cs">
+      <DependentUpon>jardin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jardin.aspx.designer.cs">
+      <DependentUpon>jardin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="listarAvanceAcademico.aspx.cs">
       <DependentUpon>listarAvanceAcademico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="listarAvanceAcademico.aspx.designer.cs">
       <DependentUpon>listarAvanceAcademico.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="listarJardines.aspx.cs">
-      <DependentUpon>listarJardines.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="listarJardines.aspx.designer.cs">
-      <DependentUpon>listarJardines.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="listarNinos.aspx.cs">
-      <DependentUpon>listarNinos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="listarNinos.aspx.designer.cs">
-      <DependentUpon>listarNinos.aspx</DependentUpon>
     </Compile>
     <Compile Include="listarTipoUsuarios.aspx.cs">
       <DependentUpon>listarTipoUsuarios.aspx</DependentUpon>
