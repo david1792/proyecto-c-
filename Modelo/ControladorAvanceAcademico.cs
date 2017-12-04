@@ -9,28 +9,24 @@ namespace Modelo
 {
     public class ControladorAvanceAcademico
     {
-        public bool registrarAvanceAcademico(avanceAcademico avanceAcademico)
+        public void registrarAvanceAcademico(avanceAcademico avanceAcademico)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            bool bandera = false;
             try
             {
                 db.avanceAcademicos.InsertOnSubmit(avanceAcademico);
                 db.SubmitChanges();
-                bandera = true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            return bandera;
 
         }
 
-        public bool eliminarAvanceAcademico(int id)
+        public void eliminarAvanceAcademico(int id)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            bool bandera = false;
             try
             {
                 var sentencia = (from p in db.avanceAcademicos
@@ -39,21 +35,18 @@ namespace Modelo
 
                 db.avanceAcademicos.DeleteOnSubmit(sentencia);
                 db.SubmitChanges();
-                bandera = true;
             }
             catch (Exception e)
             {
 
                 Console.WriteLine(e.Message);
             }
-            return bandera;
 
         }
 
-        public bool actualizarAvanceAcademico(avanceAcademico avanceAcademico)
+        public void actualizarAvanceAcademico(avanceAcademico avanceAcademico)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            bool bandera = false;
             try
             {
                 var sentencia = (from p in db.avanceAcademicos
@@ -68,13 +61,11 @@ namespace Modelo
                 sentencia.descripcion = avanceAcademico.descripcion;
                 sentencia.fechaCalificacion = avanceAcademico.fechaCalificacion;
                 db.SubmitChanges();
-                bandera = true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            return bandera;
 
         }
 

@@ -132,6 +132,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Asistencia.aspx" />
+    <Content Include="avancesAcademico.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -200,6 +201,13 @@
     </Compile>
     <Compile Include="Asistencia.aspx.designer.cs">
       <DependentUpon>Asistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="avancesAcademico.aspx.cs">
+      <DependentUpon>avancesAcademico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="avancesAcademico.aspx.designer.cs">
+      <DependentUpon>avancesAcademico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
