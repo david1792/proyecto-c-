@@ -50,6 +50,7 @@
             <asp:Button ID="btCrear" runat="server" Text="Crear usuario" OnClick="btCrear_Click" />
             <asp:Button ID="btEliminar" runat="server" Text="Eliminar usuario" OnClick="btEliminar_Click" />
             <asp:Button ID="btEditar" runat="server" Text="editar usuario" OnClick="btEditar_Click" />
+            <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
             <br/><br/>
             <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" DataSourceID="LinqDataSource1ListarUsuarios">
                 <Columns>

@@ -10,7 +10,7 @@
 namespace ProyectoICBF {
     
     
-    public partial class jardin {
+    public partial class tiposUsuario {
         
         /// <summary>
         /// form1 control.
@@ -22,49 +22,40 @@ namespace ProyectoICBF {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// tbIdJardin control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbIdJardin;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// tbNombre control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNombre;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// tbDireccion control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDireccion;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// ddEncargado control.
+        /// TextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddEncargado;
-        
-        /// <summary>
-        /// ddEstado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddEstado;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
         
         /// <summary>
         /// btCrear control.
@@ -76,57 +67,39 @@ namespace ProyectoICBF {
         protected global::System.Web.UI.WebControls.Button btCrear;
         
         /// <summary>
-        /// btActualizar control.
+        /// btEditar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btActualizar;
+        protected global::System.Web.UI.WebControls.Button btEditar;
         
         /// <summary>
-        /// btEliminar control.
+        /// btElimibnar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btEliminar;
+        protected global::System.Web.UI.WebControls.Button btElimibnar;
         
         /// <summary>
-        /// labelError control.
+        /// gvTiposUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelError;
+        protected global::System.Web.UI.WebControls.GridView gvTiposUsuario;
         
         /// <summary>
-        /// gvJardines control.
+        /// LinqDataSource1TipoUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvJardines;
-        
-        /// <summary>
-        /// LinqDataSource1Jardines control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1Jardines;
-        
-        /// <summary>
-        /// LinqDataSource1Encargado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1Encargado;
+        protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1TipoUsuario;
     }
 }

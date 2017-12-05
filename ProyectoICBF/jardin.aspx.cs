@@ -19,12 +19,22 @@ namespace ProyectoICBF
         {
             ControladorJardin controladorJardin = new ControladorJardin();
             jardine jardine = new jardine();
-            jardine.idJardin = tbIdJardin.Text;
-            jardine.nombre = tbNombre.Text;
-            jardine.encargado = ddEncargado.SelectedValue;
-            jardine.estado = ddEstado.SelectedValue;
-            controladorJardin.registrarJardin(jardine);
-            gvJardines.DataBind();
+            if (controladorJardin.validarJardinExistente(int.Parse(tbIdJardin.Text), tbNombre.Text) == false)
+            {
+                jardine.idJardin = tbIdJardin.Text;
+                jardine.nombre = tbNombre.Text;
+                jardine.encargado = ddEncargado.SelectedValue;
+                jardine.estado = ddEstado.SelectedValue;
+                jardine.direccion = tbDireccion.Text;
+                controladorJardin.registrarJardin(jardine);
+                labelError.Text = "jardin registrado con exito";
+                gvJardines.DataBind();
+            }
+            else
+            {
+                gvJardines.DataBind();
+                labelError.Text = "jardin ya se encuentra en la base de datos";
+            }
         }
 
         protected void btActualizar_Click(object sender, EventArgs e)
@@ -35,6 +45,7 @@ namespace ProyectoICBF
             jardine.nombre = tbNombre.Text;
             jardine.encargado = ddEncargado.SelectedValue;
             jardine.estado = ddEstado.SelectedValue;
+            jardine.direccion = tbDireccion.Text;
             controladorJardin.actualizarJardin(jardine);
             gvJardines.DataBind();
         }

@@ -110,5 +110,28 @@ namespace Modelo
             }
             return usuario;
         }
+
+        public bool validarMadreComunitariaExistente(int idmadre)
+        {
+            bool bandera = false;
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            try
+            {
+                var consulta = (from p in db.usuarios
+                                where p.idUsuario == idmadre.ToString()
+                                select p).First();// nombreRol = p.rol.nombre me trae el nombre del rol, si colocamos id me retorna el id
+                if (consulta.idUsuario != null)
+                {
+                    bandera = true;
+                }
+                return bandera;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return bandera;
+            }
+            return bandera;
+        }
     }
 }

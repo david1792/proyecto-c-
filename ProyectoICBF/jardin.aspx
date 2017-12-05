@@ -32,6 +32,7 @@
             <asp:Button ID="btCrear" runat="server" Text="Crear" OnClick="btCrear_Click" />
             <asp:Button ID="btActualizar" runat="server" Text="Actualizar" OnClick="btActualizar_Click" />
             <asp:Button ID="btEliminar" runat="server" Text="Eliminar" OnClick="btEliminar_Click" />
+            <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
             <asp:GridView ID="gvJardines" runat="server" AutoGenerateColumns="False" DataSourceID="LinqDataSource1Jardines">
                 <Columns>
                     <asp:BoundField DataField="idJardin" HeaderText="idJardin" ReadOnly="True" SortExpression="idJardin" />

@@ -19,21 +19,31 @@ namespace ProyectoICBF
         {
             CLSPersona clsPersona = new CLSPersona();
             usuario usuario = new usuario();
-            usuario.idUsuario = tbIdUsuario.Text;
-            usuario.nombres = tbNombre.Text;
-            usuario.apellidos = tbApellido.Text;
-            usuario.fechaNace = DateTime.Parse(tbFechaNacimiento.Text);
-            usuario.telefono = tbTelefono.Text;
-            usuario.direccion = tbDireccion.Text;
-            usuario.email = tbEmail.Text;
-            usuario.estado = int.Parse(tbEstado.Text);
-            usuario.tUsuario = int.Parse(ddlTipoUsuario.SelectedValue);
-            usuario.clave = tbClave.Text;
-            if (clsPersona.registrarUsuario(usuario))
-            {
-                Console.WriteLine("sss");
-            }
-            gvUsuarios.DataBind();
+                if (clsPersona.validarMadreComunitariaExistente(int.Parse(tbIdUsuario.Text)) == false)
+                {
+                    usuario.idUsuario = tbIdUsuario.Text;
+                    usuario.nombres = tbNombre.Text;
+                    usuario.apellidos = tbApellido.Text;
+                    usuario.fechaNace = DateTime.Parse(tbFechaNacimiento.Text);
+                    usuario.telefono = tbTelefono.Text;
+                    usuario.direccion = tbDireccion.Text;
+                    usuario.email = tbEmail.Text;
+                    usuario.estado = int.Parse(tbEstado.Text);
+                    usuario.tUsuario = int.Parse(ddlTipoUsuario.SelectedValue);
+                    usuario.clave = tbClave.Text;
+                    if (clsPersona.registrarUsuario(usuario))
+                    {
+                        Console.WriteLine("sss");
+                    }
+                    gvUsuarios.DataBind();
+                    labelError.Text = "usuario registrado con exito";
+                }
+                else
+                {
+                    gvUsuarios.DataBind();
+                    labelError.Text = "usuario ya se encuentra en la base de datos";
+                }
+            
         }
 
         protected void btEliminar_Click(object sender, EventArgs e)

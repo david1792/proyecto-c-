@@ -9,28 +9,24 @@ namespace Modelo
 {
     public class CsAsistencia
     {
-        public bool registrarAsistencia(asistencia asistencia )
+        public void registrarAsistencia(asistencia asistencia )
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            bool bandera = false;
             try
             {
                 db.asistencias.InsertOnSubmit(asistencia);
                 db.SubmitChanges();
-                bandera = true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            return bandera;
 
         }
 
-        public bool eliminarAsistencia(int id)
+        public void eliminarAsistencia(int id)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            bool bandera = false;
             try
             {
                 var sentencia = (from p in db.asistencias
@@ -39,21 +35,18 @@ namespace Modelo
 
                 db.asistencias.DeleteOnSubmit(sentencia);
                 db.SubmitChanges();
-                bandera = true;
             }
             catch (Exception e)
             {
 
                 Console.WriteLine(e.Message);
             }
-            return bandera;
 
         }
 
-        public bool actualizarAsistencia(asistencia asistencia)
+        public void actualizarAsistencia(asistencia asistencia)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            bool bandera = false;
             try
             {
                 var sentencia = (from p in db.asistencias
@@ -64,13 +57,11 @@ namespace Modelo
                 sentencia.fecha = asistencia.fecha;
                 sentencia.estadoNino = asistencia.estadoNino;
                 db.SubmitChanges();
-                bandera = true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            return bandera;
 
         }
 

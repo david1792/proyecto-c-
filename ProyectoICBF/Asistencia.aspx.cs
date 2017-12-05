@@ -20,13 +20,11 @@ namespace ProyectoICBF
             CsAsistencia csAsistencia = new CsAsistencia();
             asistencia asistencia = new asistencia();
             asistencia.fecha = DateTime.Parse(tbFecha.Text);
-            asistencia.estadoNino = tbEstado.Text;
+            asistencia.estadoNino = ddlEstado.SelectedValue.ToString();
             asistencia.noRegistro = int.Parse(tbRegistro.Text);
             asistencia.nIdNino = ddlNinosAsistencia.SelectedValue.ToString();
-            if (csAsistencia.actualizarAsistencia(asistencia))
-            {
-                Console.WriteLine("sss");
-            }
+            csAsistencia.actualizarAsistencia(asistencia);
+
             gvAsistencia.DataBind();
 
         }
@@ -34,10 +32,8 @@ namespace ProyectoICBF
         protected void btEliminar_Click(object sender, EventArgs e)
         {
             CsAsistencia csAsistencia = new CsAsistencia();
-            if (csAsistencia.eliminarAsistencia(int.Parse(tbRegistro.Text)))
-            {
-                Console.WriteLine("sss");
-            }
+            csAsistencia.eliminarAsistencia(int.Parse(tbRegistro.Text));
+
             gvAsistencia.DataBind();
         }
 
@@ -46,13 +42,10 @@ namespace ProyectoICBF
             CsAsistencia csAsistencia = new CsAsistencia();
             asistencia asistencia = new asistencia();
             asistencia.fecha = DateTime.Parse(tbFecha.Text);
-            asistencia.estadoNino = tbEstado.Text;
+            asistencia.estadoNino = ddlEstado.SelectedValue;
             asistencia.noRegistro = int.Parse(tbRegistro.Text);
             asistencia.nIdNino = ddlNinosAsistencia.SelectedValue.ToString();
-            if (csAsistencia.registrarAsistencia(asistencia))
-            {
-                Console.WriteLine("sss");
-            }
+            csAsistencia.registrarAsistencia(asistencia);
             gvAsistencia.DataBind();
         }
     }

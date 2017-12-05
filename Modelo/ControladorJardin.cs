@@ -61,5 +61,28 @@ namespace Modelo
                 Console.WriteLine(e.Message);
             }
         }
+
+        public bool validarJardinExistente(int idjardin, string nombre)
+        {
+            bool bandera = false;
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            try
+            {
+                var consulta = (from p in db.jardines
+                                where p.idJardin == idjardin.ToString() || p.nombre == nombre
+                                select p).First();// nombreRol = p.rol.nombre me trae el nombre del rol, si colocamos id me retorna el id
+                if (consulta.idJardin != null)
+                {
+                    bandera = true;
+                }
+                return bandera;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return bandera;
+            }
+            return bandera;
+        }
     }
 }

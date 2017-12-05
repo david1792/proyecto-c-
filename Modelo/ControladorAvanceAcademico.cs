@@ -77,12 +77,17 @@ namespace Modelo
             return consulta;
         }
 
-        public object consultarAvanceAcademico()
+        public object consultarAvanceAcademicoAcudiente(int idAcudiente)
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
-            var consulta = from p in db.ninos
-                           select p;// nombreRol = p.rol.nombre me trae el nombre del rol, si colocamos id me retorna el id
-            return consulta;
+            var consulta = from varAvance in db.avanceAcademicos
+                           join varNinos in db.ninos on varAvance.nIdNino equals varNinos.idNino
+                           join varUsuario in db.usuarios on varNinos.aIdAcudiente equals idAcudiente.ToString()
+                           select new {noRegistro = varAvance.noRegsitro, nIdNino = varAvance.nino.nombres,
+                                        anioEscolar = varAvance.anioEscolar, nivel = varAvance.nivel,
+                                        nota = varAvance.nota, descripcion = varAvance.descripcion,
+                                        fechaCalificacion = varAvance.fechaCalificacion};// nombreRol = p.rol.nombre me trae el nombre del rol, si colocamos id me retorna el id
+            return consulta.Distinct();
         }
     }
 }

@@ -16,20 +16,25 @@
             <div class="wrapper">
 
                 <div class="col-md-6">
-                    <asp:Label ID="Label1" runat="server" Text="lbRegistro"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Registro"></asp:Label>
                     <asp:TextBox class="form-control" ID="tbRegistro" runat="server"></asp:TextBox>
                     <br />
-                    <asp:Label ID="Label3" runat="server" Text="lbFecha"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Fecha"></asp:Label>
                     <asp:TextBox class="form-control" ID="tbFecha" runat="server"></asp:TextBox>
 
                     <cc1:CalendarExtender Format="yyyy-MM-dd" ID="tbFecha_CalendarExtender" runat="server" Enabled="True" PopupButtonID="imgCalendario" TargetControlID="tbFecha">
                     </cc1:CalendarExtender>
                     <asp:ImageButton ID="imgCalendario" runat="server" Height="20px" ImageUrl="~/img/1.jpg" Width="20px" />
                     <br />
-                    <asp:Label ID="Label4" runat="server" Text="lbEstado"></asp:Label>
-                    <asp:TextBox class="form-control" ID="tbEstado" runat="server"></asp:TextBox>
+                    <asp:Label ID="Label4" runat="server" Text="Estado"></asp:Label>
+                    <asp:DropDownList ID="ddlEstado" runat="server">
+                        <asp:ListItem>buen estado animico</asp:ListItem>
+                        <asp:ListItem>enfermo</asp:ListItem>
+                        <asp:ListItem>sin desayunar</asp:ListItem>
+                        <asp:ListItem>no entro a clase</asp:ListItem>
+                    </asp:DropDownList>
                     <br />
-                    <asp:Label ID="Label5" runat="server" Text="lbNiño"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text="Niño"></asp:Label>
                     <asp:DropDownList ID="ddlNinosAsistencia" runat="server" DataSourceID="LinqDataSourceNiñosAsistencia" DataTextField="nombres" DataValueField="idNino"></asp:DropDownList>
                 </div>
 

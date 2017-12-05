@@ -41,7 +41,7 @@ namespace Modelo
                 sentencia.telefono = nino.telefono;
                 sentencia.direccion = nino.direccion;
                 sentencia.EPS = nino.EPS;
-                sentencia.jardine = nino.jardine;
+                sentencia.jIdJardin = nino.jIdJardin;
                 sentencia.uIdUsuarioRegistra = nino.uIdUsuarioRegistra;
                 db.SubmitChanges();
 
@@ -69,6 +69,29 @@ namespace Modelo
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            }
+            return bandera;
+        }
+
+        public bool validarNinoExistente(int idNino)
+        {
+            bool bandera = false;
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            try
+            {
+                var consulta = (from p in db.ninos
+                                where p.idNino == idNino.ToString()
+                                select p).First();// nombreRol = p.rol.nombre me trae el nombre del rol, si colocamos id me retorna el id
+                if (consulta.idNino != null)
+                {
+                    bandera = true;
+                }
+                return bandera;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return bandera;
             }
             return bandera;
         }
