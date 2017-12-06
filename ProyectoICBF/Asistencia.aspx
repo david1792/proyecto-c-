@@ -46,6 +46,7 @@
                         <asp:Button class="form-control" ID="btActualizar" runat="server" Text="Actualizar asistencia" Height="26px" Width="129px" OnClick="btActualizar_Click" />
                         <asp:Button class="form-control" ID="btEliminar" runat="server" Text="Eliminar asistencia" Height="26px" Width="118px" OnClick="btEliminar_Click" />
                         <asp:Button class="form-control" ID="btCrear" runat="server" Text="Crear asistencia" Height="26px" Width="103px" OnClick="btCrear_Click" />
+                        <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <br />

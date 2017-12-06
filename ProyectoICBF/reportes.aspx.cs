@@ -15,6 +15,8 @@ namespace ProyectoICBF
         {
             gvAsistenciaLoad();
             gvInasistenciaEnfermedadLoad();
+            gvNinosJardinLoad();
+            gvJardinesDesaprobadoLoad();
         }
 
         public void gvAsistenciaLoad()
@@ -40,11 +42,31 @@ namespace ProyectoICBF
         public void gvNinosJardinLoad()
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
+            var consulta = from varNinos in db.ninos
+                           join varJardin in db.jardines on varNinos.jIdJardin equals varJardin.idJardin
+                           orderby varNinos.jIdJardin
+                           select new
+                           {
+                               nombre = varNinos.nombres,
+                               apellido = varNinos.apellidos,
+                               telefono = varNinos.telefono,
+                               direccion = varNinos.direccion,
+                               eps = varNinos.EPS,
+                               jardin = varNinos.jardine.nombre,
+                           };
+
+            gvNinosJardin.DataSource = consulta;
+            gvNinosJardin.DataBind();
         }
 
         public void gvJardinesDesaprobadoLoad()
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
+            var consulta = from varJardin in db.jardines
+                           where varJardin.estado == "0"
+                           select varJardin;
+            gvJardinesDesaprobado.DataSource = consulta;
+            gvJardinesDesaprobado.DataBind();
         }
     }
 }

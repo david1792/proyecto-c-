@@ -19,13 +19,22 @@ namespace ProyectoICBF
         {
             CsAsistencia csAsistencia = new CsAsistencia();
             asistencia asistencia = new asistencia();
-            asistencia.fecha = DateTime.Parse(tbFecha.Text);
-            asistencia.estadoNino = ddlEstado.SelectedValue.ToString();
-            asistencia.noRegistro = int.Parse(tbRegistro.Text);
-            asistencia.nIdNino = ddlNinosAsistencia.SelectedValue.ToString();
-            csAsistencia.actualizarAsistencia(asistencia);
+            if (DateTime.Now.Hour >= 8 && DateTime.Now.Hour <= 10)
+            {
+                asistencia.fecha = DateTime.Parse(tbFecha.Text);
+                asistencia.estadoNino = ddlEstado.SelectedValue.ToString();
+                asistencia.noRegistro = int.Parse(tbRegistro.Text);
+                asistencia.nIdNino = ddlNinosAsistencia.SelectedValue.ToString();
+                csAsistencia.actualizarAsistencia(asistencia);
+                gvAsistencia.DataBind();
+                labelError.Text = "se actualizo exitosamente la asistencia";
+            }
+            else
+            {
+                gvAsistencia.DataBind();
+                labelError.Text = "la asistencia se toma de 8 a 10 am";
 
-            gvAsistencia.DataBind();
+            }
 
         }
 
@@ -41,12 +50,22 @@ namespace ProyectoICBF
         {
             CsAsistencia csAsistencia = new CsAsistencia();
             asistencia asistencia = new asistencia();
-            asistencia.fecha = DateTime.Parse(tbFecha.Text);
-            asistencia.estadoNino = ddlEstado.SelectedValue;
-            asistencia.noRegistro = int.Parse(tbRegistro.Text);
-            asistencia.nIdNino = ddlNinosAsistencia.SelectedValue.ToString();
-            csAsistencia.registrarAsistencia(asistencia);
-            gvAsistencia.DataBind();
+            if (DateTime.Now.Hour >= 8 && DateTime.Now.Hour <= 10)
+            {
+                asistencia.fecha = DateTime.Parse(tbFecha.Text);
+                asistencia.estadoNino = ddlEstado.SelectedValue;
+                asistencia.noRegistro = int.Parse(tbRegistro.Text);
+                asistencia.nIdNino = ddlNinosAsistencia.SelectedValue.ToString();
+                csAsistencia.registrarAsistencia(asistencia);
+                gvAsistencia.DataBind();
+                labelError.Text = "se registro exitosamente la asistencia" + DateTime.Now.Hour;
+            }
+            else
+            {
+                gvAsistencia.DataBind();
+                labelError.Text = "la asistencia se toma de 8 a 10 am" + DateTime.Now.Hour;
+            }
+
         }
     }
 }
