@@ -68,5 +68,11 @@ namespace ProyectoICBF
             gvJardinesDesaprobado.DataSource = consulta;
             gvJardinesDesaprobado.DataBind();
         }
+
+        protected void cerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("index.aspx");
+        }
     }
 }

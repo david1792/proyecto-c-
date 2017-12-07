@@ -56,5 +56,11 @@ namespace ProyectoICBF
             controladorJardin.eliminarJardin(int.Parse(tbIdJardin.Text));
             gvJardines.DataBind();
         }
+
+        protected void cerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("index.aspx");
+        }
     }
 }

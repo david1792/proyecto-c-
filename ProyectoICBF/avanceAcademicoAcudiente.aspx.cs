@@ -14,8 +14,17 @@ namespace ProyectoICBF
         {
             ControladorAvanceAcademico controladorAvanceAcademico = new ControladorAvanceAcademico();
             gvAvanceAcademico.DataSourceID = null;
-            gvAvanceAcademico.DataSource = controladorAvanceAcademico.consultarAvanceAcademicoAcudiente(15);
+            gvAvanceAcademico.DataSource = controladorAvanceAcademico.consultarAvanceAcademicoAcudiente(int.Parse(Session["id"].ToString()));
             gvAvanceAcademico.DataBind();
+            usuarioSesion.Text = Session["nombre"].ToString();
+            idSesion.Text = Session["id"].ToString();
+
+        }
+
+        protected void cerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("index.aspx");
         }
     }
 }

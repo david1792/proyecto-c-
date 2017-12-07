@@ -1,11 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ninos.aspx.cs" Inherits="ProyectoICBF.ninos" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+   
     <title></title>
+   
 </head>
 <body>
     <form id="form1" runat="server">
@@ -108,6 +111,7 @@
             </asp:GridView>
             <asp:LinqDataSource ID="LinqDataSource1NinosListar" runat="server" ContextTypeName="Modelo.DataClasses1DataContext" EntityTypeName="" Select="new (idNino, nombres, apellidos, FechaNacimiento, tipoSangre, ciudadOrigen, jardine, avanceAcademicos, asistencias, EPS, direccion, telefono, usuario, aIdAcudiente, jIdJardin, uIdUsuarioRegistra)" TableName="ninos">
             </asp:LinqDataSource>
+            <asp:Button ID="cerrarSesion" runat="server" Text="cerrar sesion" OnClick="cerrarSesion_Click" />
         </div>
     </form>
 </body>

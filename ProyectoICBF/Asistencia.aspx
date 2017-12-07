@@ -67,6 +67,7 @@
             </div>
             <asp:LinqDataSource ID="LinqDataSourceAsistencia" runat="server" ContextTypeName="Modelo.DataClasses1DataContext" EntityTypeName="" Select="new (noRegistro, nIdNino, fecha, estadoNino, nino)" TableName="asistencias">
             </asp:LinqDataSource>
+            <asp:Button ID="cerrarSesion" runat="server" Text="cerrar sesion" OnClick="cerrarSesion_Click" />
         </div>
     </form>
 </body>

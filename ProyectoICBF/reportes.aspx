@@ -9,14 +9,15 @@
 <body>
     <form id="form1" runat="server">
         <div>
-        <asp:GridView ID="gvAsistencia" runat="server"></asp:GridView>
-        <br />
-        <asp:GridView ID="gvInasistenciaEnfermedad" runat="server"></asp:GridView>
-        <br />
-        <asp:GridView ID="gvNinosJardin" runat="server"></asp:GridView>
-        <br />
-        <asp:GridView ID="gvJardinesDesaprobado" runat="server"></asp:GridView>
-        <br />
+            <asp:GridView ID="gvAsistencia" runat="server"></asp:GridView>
+            <br />
+            <asp:GridView ID="gvInasistenciaEnfermedad" runat="server"></asp:GridView>
+            <br />
+            <asp:GridView ID="gvNinosJardin" runat="server"></asp:GridView>
+            <br />
+            <asp:GridView ID="gvJardinesDesaprobado" runat="server"></asp:GridView>
+            <br />
+            <asp:Button ID="cerrarSesion" runat="server" Text="cerrar sesion" OnClick="cerrarSesion_Click" />
         </div>
     </form>
 </body>

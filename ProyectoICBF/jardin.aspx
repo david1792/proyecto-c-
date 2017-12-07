@@ -11,19 +11,19 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:label runat="server" text="Id jardin"></asp:label>
+            <asp:Label runat="server" Text="Id jardin"></asp:Label>
             <asp:TextBox ID="tbIdJardin" runat="server"></asp:TextBox>
             <br />
-            <asp:label runat="server" text="Nombre"></asp:label>
+            <asp:Label runat="server" Text="Nombre"></asp:Label>
             <asp:TextBox ID="tbNombre" runat="server"></asp:TextBox>
             <br />
-            <asp:label runat="server" text="Direccion"></asp:label>
+            <asp:Label runat="server" Text="Direccion"></asp:Label>
             <asp:TextBox ID="tbDireccion" runat="server"></asp:TextBox>
             <br />
-            <asp:label runat="server" text="Encargado"></asp:label>
+            <asp:Label runat="server" Text="Encargado"></asp:Label>
             <asp:DropDownList ID="ddEncargado" runat="server" DataSourceID="LinqDataSource1Encargado" DataTextField="nombres" DataValueField="idUsuario"></asp:DropDownList>
             <br />
-            <asp:label runat="server" text="tbEstado"></asp:label>
+            <asp:Label runat="server" Text="tbEstado"></asp:Label>
             <asp:DropDownList ID="ddEstado" runat="server">
                 <asp:ListItem Value="1">aprobado</asp:ListItem>
                 <asp:ListItem Value="0">desaprobado</asp:ListItem>
@@ -47,6 +47,7 @@
             <br />
             <asp:LinqDataSource ID="LinqDataSource1Encargado" runat="server" ContextTypeName="Modelo.DataClasses1DataContext" EntityTypeName="" Select="new (idUsuario, nombres, apellidos)" TableName="usuarios">
             </asp:LinqDataSource>
+            <asp:Button ID="cerrarSesion" runat="server" Text="cerrar sesion" OnClick="cerrarSesion_Click" />
         </div>
     </form>
 </body>

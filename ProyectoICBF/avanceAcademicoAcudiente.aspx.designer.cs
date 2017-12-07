@@ -22,6 +22,24 @@ namespace ProyectoICBF {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// usuarioSesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label usuarioSesion;
+        
+        /// <summary>
+        /// idSesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label idSesion;
+        
+        /// <summary>
         /// gvAvanceAcademico control.
         /// </summary>
         /// <remarks>
@@ -38,5 +56,14 @@ namespace ProyectoICBF {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1AvanceAcademicoAcudiente;
+        
+        /// <summary>
+        /// cerrarSesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cerrarSesion;
     }
 }

@@ -25,7 +25,18 @@ namespace ProyectoICBF
             {
                 Session["id"] = persona.idUsuario;
                 Session["nombre"] = persona.nombres;
-                Response.Redirect("listarAsistencia.aspx");
+                if (persona.tUsuario == 1)
+                {
+                    Response.Redirect("usuarios.aspx"); 
+                }
+                else if (persona.tUsuario == 2)
+                {
+                    Response.Redirect("Asistencia.aspx");
+                }
+                else if (persona.tUsuario == 3)
+                {
+                    Response.Redirect("avanceAcademicoAcudiente.aspx");
+                }
             }
         }
     }

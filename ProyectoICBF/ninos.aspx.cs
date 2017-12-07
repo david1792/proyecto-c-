@@ -80,6 +80,12 @@ namespace ProyectoICBF
             gvNinos.DataBind();
         }
 
+        protected void cerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("index.aspx");
+        }
+
         /*protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
             DateTime dtStart = DateTime.Parse(tbFecha.Text);

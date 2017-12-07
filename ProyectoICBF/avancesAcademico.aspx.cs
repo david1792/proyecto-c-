@@ -52,5 +52,11 @@ namespace ProyectoICBF
             controladorAvanceAcademico.eliminarAvanceAcademico(int.Parse(tbNoRegistro.Text));
             gvAvanceAcademico.DataBind();
         }
+
+        protected void cerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("index.aspx");
+        }
     }
 }

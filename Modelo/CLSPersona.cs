@@ -107,6 +107,7 @@ namespace Modelo
                 usuario.estado = item.estado;
                 usuario.tUsuario = item.tUsuario;
                 usuario.clave = item.clave;
+                
             }
             return usuario;
         }
