@@ -29,6 +29,7 @@ namespace ProyectoICBF
                 controladorJardin.registrarJardin(jardine);
                 labelError.Text = "jardin registrado con exito";
                 gvJardines.DataBind();
+                
             }
             else
             {

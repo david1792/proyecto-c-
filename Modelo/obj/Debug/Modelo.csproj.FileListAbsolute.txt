@@ -11,3 +11,10 @@ C:\Users\edwinGacha\source\repos\ProyectoICBF\Modelo\bin\Debug\Modelo.pdb
 C:\Users\edwinGacha\source\repos\ProyectoICBF\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\edwinGacha\source\repos\ProyectoICBF\Modelo\obj\Debug\Modelo.dll
 C:\Users\edwinGacha\source\repos\ProyectoICBF\Modelo\obj\Debug\Modelo.pdb
+C:\Users\David\source\repos\proyecto-c-\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\David\source\repos\proyecto-c-\Modelo\bin\Debug\Modelo.dll
+C:\Users\David\source\repos\proyecto-c-\Modelo\bin\Debug\Modelo.pdb
+C:\Users\David\source\repos\proyecto-c-\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\David\source\repos\proyecto-c-\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\proyecto-c-\Modelo\obj\Debug\Modelo.dll
+C:\Users\David\source\repos\proyecto-c-\Modelo\obj\Debug\Modelo.pdb

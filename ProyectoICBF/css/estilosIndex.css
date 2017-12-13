@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    margin: 0;
+    color:white;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+.header{
+    height: 60px;
+}
+/*--------------Estilos header-----------*/
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .icon-menu2{
+    margin: 5px;
+    color:#FFF;
+}
+
+.icon-menu2{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    /*background: #F0F0F0;*/
+    text-align: center;
+    color: #04B486;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*---------Estilos del menú---------*/
+.nav{
+    position:fixed;
+    top:60px;
+    left: -100%;
+    width: 100%;
+    transition:all .8s;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+.menu__link{
+    display: block;
+    padding: 15px;
+    background: #04B486;
+    text-decoration: none;
+    color:#FFF;
+    border:.5px solid #F0F0F0;
+}
+
+.menu__link:hover{
+    background-color: #F0F0F0;
+    text-decoration: none;
+    border-left:10px solid #04B486;
+    transition: .8s;
+    color: #04B486;
+    /*border-radius: 10px;*/
+}
+
+.mostrar{
+    left:0;
+}
+
+/*.select{
+    background-color: #FFF;
+    text-decoration: none;
+    border-left:10px solid #2EFE9A;
+    transition: .4s;
+    color: #2EFE9A;
+    border-radius: 10px;
+}*/
+
+/*-------Estilos Banner---------*/
+
+.banner{
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+}
+
+/*-------Estilos Banner---------*/
+
+.info__columna{
+    background: #04B486;
+    color: #FFF;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/*--------Estilos */
+
+.inicioSesion{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+    opacity: 1;
+    display: none;
+}
+
+.form-login{
+    width: 30%;
+    height: 45%;
+    background-color: #F0F0F0;
+    margin-top:10%;
+    margin-left: 34.5%;
+    border-radius: 5px;
+    display: flex;
+}
+
+.img{
+    width:100%;
+}
+
+
+.formUsuario{
+    width:55%;
+    max-height: 750px;
+    /*border:1px solid #000;*/
+}
+
+.cabeza {
+    width: 100%;
+    height: 60px;
+    list-style: none;
+}
+
+
+.estilosNavbar {
+    width: 100%;
+    height: 80px;
+    /*border:1px solid #000;*/
+}
+
+.ulh {
+    display: block;
+    float: left;
+    width: 110px;
+}
+
+* {
+    list-style: none;
+    text-decoration:none;
+}
+
+.classul{
+    display:block;
+    float:left;
+}
+
+li{
+    float:left;
+    padding:15px;
+    background-color:#04B486;
+    color:#FFF;
+    margin-top:0;
+}
+
+li:hover{
+    background:#ffd800;
+    color:#000;
+}
+ul{
+    display:inline-block;
+}
+
+body{
+    background-image:url("../img/ninos.jpg");
+    background-size:100%;
+}
